@@ -116,17 +116,31 @@ let car = {
 var driveToWork = 33;
 var driveAroundTheWorld = 24000;
 var runErrands = 30;
-let sen = "old mileage is:"
-let sen2 = 'new mileage is:'
+// let sen = "old mileage is:"
+// let sen2 = 'new mileage is:'
 
  car.driveToWork = function () {
+   car.mileage += 33
     return driveToWork + this.mileage +
   
 
-  console.log(sen + '2000' + sen2 + driveToWork);
+  console.log(`old mileage: ${car.mileage -33} | new mileage: ${car.mileage}` );
  }
-  car.driveAroundTheWorld = function() {
-    return driveAroundTheWorld + driveToWork
-  }
+ car.driveToWork();
 
+  car.driveAroundTheWorld = function() {
+    car.mileage += 24000
+    return driveAroundTheWorld + this.mileage +
+
+    console.log(`old mileage: ${car.mileage -24000} | new mileage: ${car.mileage}` );
+  }
   car.driveAroundTheWorld();
+
+  car.runErrands = function () {
+    car.mileage += 30
+    return runErrands + this.mileage +
+
+    console.log(`old mileage: ${car.mileage -30} | new mileage: ${car.mileage}` );
+  }
+  car.runErrands();
+  ;
