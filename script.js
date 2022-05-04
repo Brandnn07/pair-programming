@@ -87,21 +87,46 @@
 
 // // MEDIUM (3) 
 
-// function gcd(num1, num2) {
-// let numbers336 = [];
-// let numbers360 = [];
+// function gcd_two_numbers(x, y) {
+//   if ((typeof x !== 'number') || (typeof y !== 'number')) 
+//     return false;
+//   x = Math.abs(x);
+//   y = Math.abs(y);
+//   while(y) {
+//     var t = y;
+//     y = x % y;
+//     x = t;
+//   }
+//   return x;
+// }
 
-function gcd_two_numbers(x, y) {
-    if ((typeof x !== number) || (typeof y !== number))
-      return false;
-    x = Math.abs(x);
-    y = Math.abs(y);
-    while(y) {
-      var t = y;
-      y = x % y;
-      x = t;
-    }
-    return x;
+// console.log(gcd_two_numbers(12, 13));
+// console.log(gcd_two_numbers(9, 3));
+
+// hard 
+
+let car = {
+  make: 'toyota',
+  model: ' corolla',
+  year: 2021,
+  mileage: 2000,
+  color: 'black'
+  };
+
+var driveToWork = 33;
+var driveAroundTheWorld = 24000;
+var runErrands = 30;
+let sen = "old mileage is:"
+let sen2 = 'new mileage is:'
+
+ car.driveToWork = function () {
+    return driveToWork + this.mileage +
+  
+
+  console.log(sen + '2000' + sen2 + driveToWork);
+ }
+  car.driveAroundTheWorld = function() {
+    return driveAroundTheWorld + driveToWork
   }
-  console.log(gcd_two_numbers(12, 13));
-  console.log(gcd_two_numbers(9, 3));
+
+  car.driveAroundTheWorld();
